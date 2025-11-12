@@ -41,7 +41,7 @@ func (repo VideoRepositoryDb) Find(id string) (*domain.Video, error) {
 	repo.Db.First(&video, "id = ?", id)
 
 	if video.ID == "" {
-		return nil, fmt.Errorf("Video not found")
+		return nil, fmt.Errorf("video not found")
 	}
 
 	return &video, nil
